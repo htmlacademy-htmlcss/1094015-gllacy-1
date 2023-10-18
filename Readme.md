@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Ksenia Krasnova](https://up.htmlacademy.ru/htmlcss-individual/1/user/1094015).
-* Наставник: `Неизвестно`.
+- Студент: [Ksenia Krasnova](https://up.htmlacademy.ru/htmlcss-individual/1/user/1094015).
+- Наставник: [Ольга Тюлихова](https://htmlacademy.ru/profile/id523263).
 
 ---
 
