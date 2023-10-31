@@ -197,7 +197,7 @@ img {
 
 .navigation-link {
   display: block;
-  padding: 42px 16px;
+  padding: 8px 16px;
 
   font-weight: 400;
   font-size: 16px;
@@ -209,12 +209,24 @@ img {
 
   background-repeat: no-repeat;
   background-position: center left;
+  border-radius: 27px;
+}
+
+/* Состояние кнопки */
+
+.navigation-link:active {
+  background-color: #fcfcfc;
+  border-color: transparent;
+}
+
+.navigation-link:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .navigation-link.navigation-link-catalog::after {
   content: "";
   position: absolute;
-  top: 43%;
+  top: 29%;
   right: 17px;
 
   display: block;
@@ -232,10 +244,27 @@ img {
   mask-size: 16px 16px;
 }
 
+.navigation-item {
+  padding: 34px 0;
+}
+
 .navigation-link-catalog {
   position: relative;
 
   padding-right: 40px;
+}
+
+/* Состояние кнопок */
+.navigation-link-catalog:hover {
+  color: #fcfcfc;
+
+  background-color: #ff4a78;
+}
+
+.navigation-link-catalog:focus-within {
+  color: #fcfcfc;
+
+  background-color: #ff4a78;
 }
 
 .logo-header {
@@ -258,12 +287,25 @@ img {
 }
 
 .navigation-link-tel {
+  margin-right: 14px;
   padding: 6px 5px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   font-family: inherit;
+  color: #2d3440;
+  text-decoration: none;
+}
+
+/* Состояние кнопок  */
+
+.navigation-link-tel:hover {
+  color: #fcfcfc;
+}
+
+.navigation-link-tel:active {
+  opacity: 0.3;
 }
 
 .navigation-link-search {
@@ -278,9 +320,26 @@ img {
   cursor: pointer;
 }
 
+/* Состояние кнопок */
+.navigation-link-search:hover {
+  color: #fcfcfc;
+
+  background-color: #ff4a78;
+}
+
+.navigation-link-search:focus-within {
+  color: #fcfcfc;
+
+  background-color: #ff4a78;
+}
+
 .navigation-link-entrance {
-  margin-right: 16px;
+  margin-right: 17px;
   padding: 6px 16px 6px 38px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
 
   background: rgba(252, 252, 252, 0.3);
   background-image: url(../images/svg/header/entrance.svg);
@@ -290,8 +349,25 @@ img {
   cursor: pointer;
 }
 
+/* Состояние кнопок */
+.navigation-link-entrance:hover {
+  color: #fcfcfc;
+
+  background-color: #ff4a78;
+}
+
+.navigation-link-entrance:focus-within {
+  color: #fcfcfc;
+
+  background-color: #ff4a78;
+}
+
 .navigation-link-basket {
   padding: 6px 16px 6px 38px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
 
   background: rgba(252, 252, 252, 0.3);
   background-image: url(../images/svg/header/basket.svg);
@@ -299,6 +375,19 @@ img {
   background-position: left 16px center;
   border-radius: 27px;
   cursor: pointer;
+}
+
+/* Состояние кнопок */
+.navigation-link-basket:hover {
+  color: #fcfcfc;
+
+  background-color: #ff4a78;
+}
+
+.navigation-link-basket:focus-within {
+  color: #fcfcfc;
+
+  background-color: #ff4a78;
 }
 
 /* Главная страница  */
@@ -311,14 +400,15 @@ img {
   position: relative;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  min-height: 555px;
 
   gap: 0 40px;
 }
 
 .slide-caption {
-  margin: 46px 0 24px 28px;
+  margin: -6px 0 26px 30px;
 
   font-weight: 900;
   font-size: 36px;
@@ -327,7 +417,7 @@ img {
 }
 
 .slide-description {
-  margin: 0 0 48px 28px;
+  margin: 0 0 48px 30px;
 
   font-weight: 400;
   font-size: 18px;
@@ -337,7 +427,7 @@ img {
 
 .slider-button {
   position: absolute;
-  top: 55%;
+  top: 50%;
 
   display: grid;
   width: 38px;
@@ -376,7 +466,7 @@ img {
 
 .slider-bullets {
   position: absolute;
-  top: calc(100% + 38px);
+  top: calc(100% + -13px);
   left: 0;
 
   display: grid;
@@ -407,7 +497,7 @@ img {
 
 .slider-social-list {
   position: absolute;
-  top: calc(100% + 26px);
+  top: calc(100% + -25px);
   right: 1px;
 
   display: grid;
@@ -422,14 +512,16 @@ img {
   order: 2;
   width: 100px;
 
-  gap: 0 20px;
+  gap: 35px;
   grid-template-columns: 200px;
 }
 
 .slide.active {
+  flex-grow: 1;
   order: 1;
   width: auto;
   margin: 0 -50px 0 0;
+  padding-left: 40px;
 
   grid-template-columns: 470px 367px;
 }
@@ -469,8 +561,8 @@ img {
 .slide-image:before {
   content: "";
   position: absolute;
-  top: 55%;
-  left: 54%;
+  top: 50%;
+  left: 50%;
   z-index: -1;
 
   display: block;
@@ -483,21 +575,8 @@ img {
 }
 
 .slide-link {
-  margin: 0 0 -3px 29px;
+  margin: 0 0 -3px 30px;
 }
-
-/* .slide-link {
-  padding: 12px 32px;
-
-  background-color: #fcfcfc;
-  background-clip: padding-box;
-  border: 4px solid rgba(252, 252, 252, 0.4);
-  border-radius: 26px;
-  border-radius: 26px;
-  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
-
-  transition: border-color 0.3s ease-in, background-color 0.3s ease-in;
-} */
 
 .slide-link:hover {
   background-color: rgba(252, 252, 252, 0.4);
@@ -518,7 +597,7 @@ img {
 
 /* Блок с акциями */
 .action-block {
-  margin-top: 130px;
+  margin-top: 80px;
   margin-bottom: 80px;
 
   text-align: center;
@@ -637,7 +716,7 @@ img {
 .product-container-description {
   display: block;
   width: 190px;
-  margin-top: 10px;
+  margin-top: 9px;
   margin-bottom: 19px;
 
   text-align: center;
@@ -645,6 +724,8 @@ img {
 }
 
 .product-container-basket {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   width: 190px;
@@ -659,11 +740,28 @@ img {
   color: var(--extra-dark);
 }
 
+.basket-button {
+  position: absolute;
+  top: -4px;
+  right: 0;
+
+  display: block;
+  min-width: 32px;
+  min-height: 32px;
+
+  background: var(--extra-pink);
+  background-image: url(../images/svg/basket.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /*
 Блок с информацией о товарах */
 
 .information-shop {
-  margin-bottom: 80px;
+  margin-bottom: 79px;
   padding: 24px;
 
   background-image: url(../images/png/waffle-pattern.png);
@@ -770,6 +868,8 @@ img {
   padding: 6px;
 
   background-image: url(../images/png/postal-background.png);
+  background-position: left -4px top;
+  background-size: cover;
   border-radius: 16px;
 }
 
@@ -837,7 +937,7 @@ img {
 
 .form-description {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .form-delivery {
@@ -847,7 +947,7 @@ img {
 
 .form-begginning {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .form-delivery-label {
@@ -931,7 +1031,7 @@ img {
 
 .contacts-description {
   margin-top: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   font-weight: 700;
   font-size: 20px;
@@ -1028,6 +1128,8 @@ img {
 }
 
 .footer-info-text-like {
+  position: relative;
+
   margin-right: 24px;
 
   font-weight: 700;
@@ -1035,10 +1137,14 @@ img {
   line-height: 20px;
   font-family: inherit;
   color: var(--extra-dark);
+}
 
-  background-image: url(../images/svg/heart.svg);
-  background-repeat: no-repeat;
-  background-position: left;
+.footer-info-text-like::before {
+  content: url(../images/svg/heart.svg);
+  position: absolute;
+  position: absolute;
+  top: 1px;
+  left: -23px;
 }
 
 .footer-documents {
@@ -1105,7 +1211,7 @@ img {
   content: "";
   position: absolute;
   top: 50%;
-  right: -21px;
+  right: -18px;
 
   width: 7px;
   height: 6px;
@@ -1332,23 +1438,13 @@ img {
   margin-right: 4px;
   padding: 5px 4px;
 
-  border: 2px solid var(--extra-dark);
-  border-radius: 16%;
+  background-image: url(../images/svg/union.svg);
 
   appearance: none;
 }
 
-.filter-input-check:checked::before {
-  content: "";
-
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  background-image: url(../images/tick.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.filter-input-check:checked {
+  background-image: url(../images/svg/checkbox.svg);
 }
 
 .filter-submit {
@@ -1386,6 +1482,10 @@ img {
 
 .product-card-more {
   margin-right: 504px;
+}
+
+.footer-inner {
+  border-top: 1px solid rgba(252, 252, 252, 0.3);
 }
 
 .pagination {
