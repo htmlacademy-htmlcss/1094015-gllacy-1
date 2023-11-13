@@ -21,12 +21,10 @@
             </a>
           </li>
           <li class="navigation-item dropdown">
-            <a class="navigation-link navigation-link-catalog" href="catalog.html">Каталог</a>
-            <!-- <div class="navigation-catalog-container">
+            <a class="navigation-link navigation-link-catalog navigation-link-dropdown" href="catalog.html">Каталог</a>
+            <div class="dropdown-cantainer-catalog">
+              <h2 class="dropdown-menu-title">Новинки</h2>
               <ul class="grop-down-navigation list-reset">
-                <li class="grop-down-catalog">
-                  <a class="grop-down-catalog-link" href="#">Новинки</a>
-                </li>
                 <li class="grop-down-catalog">
                   <a class="grop-down-catalog-link" href="catalog.html">Сливочное</a>
                 </li>
@@ -40,7 +38,7 @@
                   <a class="grop-down-catalog-link" href="#">Мелорин</a>
                 </li>
               </ul>
-            </div> -->
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка и оплата</a>
@@ -58,65 +56,81 @@
             <a class="navigation-link navigation-link-search navigation-link-dropdown" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
-            <!-- <div class="dropdown-container-search">
+            <div class="dropdown-container-search">
               <form class="search" action="https://echo.htmlacademy.ru" method="get">
                 <label class="search-label" for="search">
-                  <input class="search-input input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+                  <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
                 </label>
-                <button class="button button-dark" type="submit">Отправить</button>
+                <button class="visually-hidden" type="submit">Отправить</button>
               </form>
-            </div> -->
+            </div>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-entrance" href="#">Вход</a>
-            <!-- <div class="form-auth-block">
-                <div class="form-auth-block_content">
-                  <p class="form-auth-block-head-text">Личный кабинет</p>
-                  <form class="form_auth_style" action="https://echo.htmlacademy.ru/" method="post">
-                    <label for="mailing-email">Введите Ваш Email</label>
-                    <input class="mailing-input-header input" type="email" name="E-mail" id="mailing-email" placeholder="Введите Ваш Email" required>
-                    <label for="password>Введите Ваш пароль</label>
-                    <input class="password-input input" type="password" name="auth_pass" id="password" placeholder="Введите пароль" required>
-                    <button class="form_auth_button button button-dark" type="submit" name="form_auth_submit">Войти</button>
+          <li class="navigation-item dropdown">
+            <a class="navigation-link navigation-link-entrance navigation-link-dropdown" href="#">Вход</a>
+            <div class="dropdown-container-login">
+              <p class="form-auth-block-head-text">Личный кабинет</p>
+              <form class="form-auth-style" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="visually-hidden" for="email">Введите Ваш Email</label>
+                <input class="mailing-input-header" type="email" name="E-mail" id="mailing-email" placeholder="Введите Ваш Email" value="email@example.com" required>
+                <label class="visually-hidden" for="password">Введите Ваш пароль</label>
+                <input class="mailing-input-header" type="password" name="auth_pass" id="password" placeholder="Введите пароль" value="******" required>
+                <div class="login-wrapper">
+                  <button class="form-auth-button button button-dark" type="submit" name="form_auth_submit">Войти</button>
+                  <div class="login-wrapper-links">
                     <a class="form-auth-link">Забыли пароль?</a>
                     <a class="form-auth-link">Регистрация</a>
-                  </form>
+                  </div>
                 </div>
-              </div> -->
+              </form>
+            </div>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-basket" href="#">
-              <span class="navigation-link-num">2</span>
-              товара
+          <!-- Класс dropdown-basket-full открывает окно с полной корзиной -->
+          <li class="navigation-item dropdown dropdown-basket-full">
+            <a class="navigation-link navigation-link-basket navigation-link-dropdown" href="#" aria-label="В Корзине:">
+              <span class="navigation-link-num">2 товара</span>
             </a>
-            <!-- <div class="basket basket-small">
-              <ul class="basket-list list-reset">
-                <li class="basket-item">
-                  <a class="basket-link" href="#">
-                    <img src="images/basket-images-1.jpg" width="46" height="46" alt="Мороженное Малинка.">
-                    <span>Малинка</span>
-                  </a>
-                  <p class="basket-price">310 ₽</p>
-                  <button class="basket-del" type="button">
-                    <span class="visually-hidden">Удалить товар</span>
-                  </button>
-                </li>
-                <li class="basket-item">
-                  <a class="basket-link" href="#">
-                    <img src="images/basket-images-2.jpg" width="46" height="46" alt="Мороженное Бабл-гам.">
-                    <span>Бабл-гам</span>
-                  </a>
-                  <p class="basket-price">480 ₽</p>
-                  <button class="basket-del" type="button">
-                    <span class="visually-hidden">Удалить товар</span>
-                  </button>
-                </li>
-              </ul>
-              <div class="basket-open-container">
-                <a class="basket-open button button-dark" href="#">Оформить заказ</a>
-                <span class="basket-order">Итого: 790 ₽</span>
+            <div class="dropdown-container-basket">
+              <!-- <div class="basket-content basket-content-empty">
+                <h2 class="basket-title-dropdown">Ваша корзина пока пуста</h2>
+              </div> -->
+              <div class="basket-content basket-content-full">
+                <h2 class="basket-title-dropdown">Корзина</h2>
+                <ul class="basket-list list-reset">
+                  <li class="basket-item">
+                    <a class="basket-link" href="#">
+                      <img src="images/jpg/product/raspberry.jpg" width="46" height="46" alt="Мороженное Малинка.">
+                      <span class="basket-container">
+                        <h3 class="basket-product-title">Малинка</h3>
+                        <span class="basket-desc">1&nbsp;кг&nbsp;х&nbsp;310&nbsp;₽</span>
+                      </span>
+                    </a>
+                    <p class="basket-price">310&nbsp;₽</p>
+                    <button class="basket-del" type="button">
+                      <span class="visually-hidden">Удалить товар</span>
+                    </button>
+                  </li>
+                  <li class="basket-item">
+                    <a class="basket-link" href="#">
+                      <img src="images/jpg/product/bubble-gum.jpg" width="46" height="46" alt="Мороженное Бабл-гам.">
+                      <span class="basket-container">
+                        <h3 class="basket-product-title">Бабл-гам</h3>
+                        <span class="basket-desc">1,5&nbsp;кг&nbsp;х&nbsp;320&nbsp;₽</span>
+                      </span>
+                    </a>
+                    <p class="basket-price">480&nbsp;₽</p>
+                    <button class="basket-del" type="button">
+                      <span class="visually-hidden">Удалить товар</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="basket-open-container">
+                  <a class="basket-open button button-dark" href="#">Оформить заказ</a>
+                  <span class="basket-order">Итого:&nbsp;790&nbsp;₽</span>
+                </div>
               </div>
-              <p class="basket-null">Ваша корзина пока пуста</p>
+            </div>
+            <!-- <div class="basket-content basket-content-empty">
+              <h2 class="basket-title-dropdown">Ваша корзина пока пуста</h2>
             </div> -->
           </li>
         </ul>
@@ -336,11 +350,11 @@
               <label class="form-delivery-label">
                 <span class="label-text">Дата</span>
                 <!-- <div class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
-                  <span class="popover">
-                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите дату </span>
-                  </span>
-                </div> -->
+                                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                                <span class="popover">
+                                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите дату </span>
+                                </span>
+                              </div> -->
                 <input class="date-delivery input" type="text" name="date" placeholder="01.04.2020" required>
               </label>
               <label class="form-delivery-label">
