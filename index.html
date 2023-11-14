@@ -22,7 +22,7 @@
           </li>
           <li class="navigation-item dropdown">
             <a class="navigation-link navigation-link-catalog navigation-link-dropdown" href="catalog.html">Каталог</a>
-            <div class="dropdown-cantainer-catalog">
+            <div class="dropdown-container-catalog">
               <h2 class="dropdown-menu-title">Новинки</h2>
               <ul class="grop-down-navigation list-reset">
                 <li class="grop-down-catalog">
@@ -84,15 +84,17 @@
               </form>
             </div>
           </li>
-          <!-- Класс dropdown-basket-full открывает окно с полной корзиной -->
+          <!-- Класс dropdown-basket-full  открывает окно с полной корзиной
+          Класс dropdown-basket-empty открывает пустую корзину -->
           <li class="navigation-item dropdown dropdown-basket-full">
             <a class="navigation-link navigation-link-basket navigation-link-dropdown" href="#" aria-label="В Корзине:">
-              <span class="navigation-link-num">2 товара</span>
+              <span class="navigation-link-num navigation-link-num-full">2 товара</span>
+              <span class="navigation-link-num navigation-link-num-empty">Нет товаров</span>
             </a>
             <div class="dropdown-container-basket">
-              <!-- <div class="basket-content basket-content-empty">
-                <h2 class="basket-title-dropdown">Ваша корзина пока пуста</h2>
-              </div> -->
+              <div class="basket-content basket-content-empty">
+                <h2 class="basket-title-dropdown-empty">Ваша корзина пока пуста</h2>
+              </div>
               <div class="basket-content basket-content-full">
                 <h2 class="basket-title-dropdown">Корзина</h2>
                 <ul class="basket-list list-reset">
@@ -129,9 +131,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="basket-content basket-content-empty">
-              <h2 class="basket-title-dropdown">Ваша корзина пока пуста</h2>
-            </div> -->
           </li>
         </ul>
       </nav>
@@ -331,8 +330,8 @@
           <div class="newsletter">
             <p class="newsletter-title">Подпишитесь на нашу сладкую рассылку и будьте всегда<br> в курсе всего самого вкусного, что у нас происходит. Обещаем<br> не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form class="form-mailing" action="https://echo.htmlacademy.ru/" method="get">
-              <label class="visually-hidden" for="mailing-email">Напишите ваш E-mail</label>
-              <input class="mailing-input input" type="email" name="E-mail" id="mailing-email" placeholder="email@example.com" required>
+              <label class="visually-hidden" for="email">Напишите ваш E-mail</label>
+              <input class="mailing-input input" type="email" name="email" id="email" placeholder="email@example.com">
               <button class="button button-dark " type="submit">Отправить</button>
             </form>
           </div>
@@ -347,31 +346,32 @@
           <p class="form-description">Укажите адрес и дату доставки, и мы свяжемся<br> с вами, чтобы подтвердить заказ.</p>
           <form class="form-delivery" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form-begginning">
-              <label class="form-delivery-label">
-                <span class="label-text">Дата</span>
-                <!-- <div class="tooltip">
-                                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
-                                <span class="popover">
-                                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите дату </span>
-                                </span>
-                              </div> -->
-                <input class="date-delivery input" type="text" name="date" placeholder="01.04.2020" required>
-              </label>
+              <div class="form-delivery-label">
+                <label class="label-text" for="date">Дата</label>
+                <div class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <span class="visually-hidden">Дополнительная информация.</span>
+                  </button>
+                  <p class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите дату доставки</p>
+                </div>
+                <input class="date-delivery input" type="number" name="date" placeholder="01.04.2020">
+              </div>
+
               <label class="form-delivery-label">
                 <span class="label-text">Телефон</span>
-                <input class="phone-delivery input" type="tel" name="tel" placeholder="+7 800 999-00-00" required>
+                <input class="phone-delivery input" type="tel" name="tel" placeholder="+7 800 999-00-00">
               </label>
             </div>
-            <label class="form-delivery-label">
-              <span class="label-text">Адрес</span>
-              <!-- <div class="tooltip">
-                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-address"></button>
-                <span class="popover">
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите название улицы, дома и квартиры</span>
-                </span>
-              </div> -->
-              <input class="address-delivery input" type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
-            </label>
+            <div class="form-delivery-label">
+              <label class="label-text">Адрес</label>
+              <div class="tooltip-adress">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-address">
+                  <span class="visually-hidden">Дополнительная информация.</span>
+                </button>
+                <p class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите название улицы, дома и квартиры</p>
+              </div>
+              <input class="address-delivery input" type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8">
+            </div>
             <button class="button button-dark button-delivery" type="submit">Отправить</button>
           </form>
         </div>
