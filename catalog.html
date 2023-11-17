@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
+  <!-- Для добавления кнопки со спинером, добавить класс button-load  -->
+
   <body>
     <!-- Шапка сайта -->
     <header class="main-header">
@@ -58,7 +60,7 @@
             <div class="dropdown-container-search">
               <form class="search" action="https://echo.htmlacademy.ru" method="get">
                 <label class="search-label" for="search">
-                  <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+                  <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
                 </label>
                 <button class="visually-hidden" type="submit">Отправить</button>
               </form>
@@ -69,21 +71,22 @@
             <div class="dropdown-container-login">
               <p class="form-auth-block-head-text">Личный кабинет</p>
               <form class="form-auth-style" action="https://echo.htmlacademy.ru/" method="post">
-                <label class="visually-hidden" for="email">Введите Ваш Email</label>
+                <label class="visually-hidden" for="mailing-email">Введите Ваш Email</label>
                 <input class="mailing-input-header" type="email" name="E-mail" id="mailing-email" placeholder="Введите Ваш Email" value="email@example.com" required>
                 <label class="visually-hidden" for="password">Введите Ваш пароль</label>
                 <input class="mailing-input-header" type="password" name="auth_pass" id="password" placeholder="Введите пароль" value="******" required>
                 <div class="login-wrapper">
                   <button class="form-auth-button button button-dark" type="submit" name="form_auth_submit">Войти</button>
                   <div class="login-wrapper-links">
-                    <a class="form-auth-link">Забыли пароль?</a>
-                    <a class="form-auth-link">Регистрация</a>
+                    <a class="form-auth-link" href="#">Забыли пароль?</a>
+                    <a class="form-auth-link" href="#">Регистрация</a>
                   </div>
                 </div>
               </form>
             </div>
           </li>
-          <!-- Класс dropdown-basket-full открывает окно с полной корзиной -->
+          <!-- Класс dropdown-basket-full открывает окно с полной корзиной
+           Класс dropdown-basket-empty открывает пустую корзину -->
           <li class="navigation-item dropdown dropdown-basket-full">
             <a class="navigation-link navigation-link-basket navigation-link-dropdown" href="#" aria-label="В Корзине:">
               <span class="navigation-link-num navigation-link-num-full">2 товара</span>
@@ -148,7 +151,7 @@
               <a class="breadcrumbs-link" href="#">Каталог</a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link breadcrumbs-link-current" aria-current="page">Сливочное мороженое</a>
+              <a class="breadcrumbs-link breadcrumbs-link-current" href="#" aria-current="page">Сливочное мороженое</a>
             </li>
           </ul>
           <h1 class="inner-title title">Сливочное мороженое</h1>
@@ -167,21 +170,32 @@
                   <option value="cost">по умолчанию</option>
                 </select>
               </div>
+
               <fieldset class="filter-group filter-group-price">
-                <p class="filter-title filter-title-price">Цена: 100 ₽ – 500 ₽</p>
+                <div class="range-container-price">
+                  <h2 class="filter-title filter-title-price">Цена:&nbsp;</h2>
+                  <label class="range-label" for="range-min">
+                    <input class="range-input range-input-min input" id="range-min" type="number" value="100" name="min-price">&nbsp;₽
+                  </label>
+                  <span>&nbsp;–&nbsp;</span>
+                  <label class="range-label" for="range-max">
+                    <input class="range-input range-input-max" id="range-max" type="number" value="500" name="max-price">&nbsp;₽
+                  </label>
+                </div>
                 <div class="range-container">
                   <div class="filter-range">
                     <div class="filter-range-bar">
-                      <button class="range-handle range-handle-min">
+                      <button class="range-handle range-handle-min" type="button">
                         <span class="visually-hidden">Установить минимальный предел цены</span>
                       </button>
-                      <button class="range-handle range-handle-max">
+                      <button class="range-handle range-handle-max" type="button">
                         <span class="visually-hidden">Установить максимальный предел цены</span>
                       </button>
                     </div>
                   </div>
                 </div>
               </fieldset>
+
               <fieldset class="filter-group filter-group-radio">
                 <p class="filter-title filter-title-fat">Жирность:</p>
                 <ul class="filter-list filter-list-radio list-reset">
@@ -484,7 +498,7 @@
               </a>
             </li>
             <li class="pagination-list-item pagination-list-item-current">
-              <a class="pagination-link pagination-link-current" aria-current="page">1</a>
+              <a class="pagination-link pagination-link-current" href="#" aria-current="page">1</a>
             </li>
             <li class="pagination-list-item">
               <a class="pagination-link" href="#">2</a>
