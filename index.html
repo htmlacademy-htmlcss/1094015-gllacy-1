@@ -62,7 +62,7 @@
               <div class="dropdown-container-search">
                 <form class="search" action="https://echo.htmlacademy.ru" method="get">
                   <label class="search-label" for="search">
-                    <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
+                    <input class="search-input input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
                   </label>
                   <button class="visually-hidden" type="submit">Отправить</button>
                 </form>
@@ -74,9 +74,9 @@
                 <p class="form-auth-block-head-text">Личный кабинет</p>
                 <form class="form-auth-style" action="https://echo.htmlacademy.ru/" method="post">
                   <label class="visually-hidden" for="mailing-email">Введите Ваш Email</label>
-                  <input class="mailing-input-header" type="email" name="E-mail" id="mailing-email" placeholder="Введите Ваш Email" value="email@example.com" required>
+                  <input class="mailing-input-header input" type="email" name="E-mail" id="mailing-email" placeholder="Введите Ваш Email" value="email@example.com" required>
                   <label class="visually-hidden" for="password">Введите Ваш пароль</label>
-                  <input class="mailing-input-header" type="password" name="auth_pass" id="password" placeholder="Введите пароль" value="******" required>
+                  <input class="mailing-input-header input" type="password" name="auth_pass" id="password" placeholder="Введите пароль" value="******" required>
                   <div class="login-wrapper">
                     <button class="form-auth-button button button-dark" type="submit" name="form_auth_submit">Войти</button>
                     <div class="login-wrapper-links">
@@ -440,22 +440,20 @@
 
     <!-- Модальное окно -->
 
-    <div class="modal-off">
+    <div class="modal-windows modal-off">
       <div class="modal-container">
-        <div class="modal">
-          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
-          <button class="modal-close-button" type="button">
-            <span class="visually-hidden">Закрыть окно поиска.</span>
-          </button>
-          <form class="form-search" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="modal-contact-information">Поле ввода фaмилии и имени</label>
-            <input class="modal-contact input" type="text" id="modal-contact-information" name="contact-information" placeholder="Имя и фамилия" required>
-            <label class="visually-hidden" for="modal-contact-email">Поле ввода Email</label>
-            <input class="modal-contact input" type="email" id="modal-contact-email" name="contact-email" placeholder="email@example.com" required>
-            <textarea class="modal-input" name="message" placeholder="В свободной форме"></textarea>
-            <button class="modal-button button button-dark" type="submit">Отправить</button>
-          </form>
-        </div>
+        <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть окно поиска.</span>
+        </button>
+        <form class="form-search" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="modal-contact-information">Поле ввода фaмилии и имени</label>
+          <input class="modal-contact input" type="text" id="modal-contact-information" name="contact-information" placeholder="Имя и фамилия" required>
+          <label class="visually-hidden" for="modal-contact-email">Поле ввода Email</label>
+          <input class="modal-contact input" type="email" id="modal-contact-email" name="contact-email" placeholder="email@example.com" required>
+          <textarea class="modal-input" name="message" placeholder="В свободной форме"></textarea>
+          <button class="modal-button button button-dark" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 
