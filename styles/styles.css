@@ -936,11 +936,11 @@ img {
 }
 
 .slider-button-prev {
-  left: 527px;
+  left: 541px;
 }
 
 .slider-button-next {
-  right: 280px;
+  right: 279px;
 
   transform: translateY(-50%) rotate(180deg);
 }
@@ -1065,8 +1065,8 @@ img {
   opacity: 1;
 }
 
-.slide.active .slide-image-strawberry:before {
-  width: 327px;
+.slide.active .slide-image:before {
+  width: 312px;
   height: 312px;
 }
 
@@ -1076,20 +1076,10 @@ img {
   opacity: 1;
 }
 
-.slide.active .slide-image-banana:before {
-  width: 316px;
-  height: 312px;
-}
-
 .slide.active .slide-image-caramel {
   width: 350px;
 
   opacity: 1;
-}
-
-.slide.active .slide-image-caramel:before {
-  width: 312px;
-  height: 312px;
 }
 
 .slide-inner {
@@ -1159,7 +1149,7 @@ img {
 .action-block-container {
   display: grid;
 
-  grid-column-gap: 30px;
+  grid-gap: 30px;
   grid-template-columns: 570px 570px;
 }
 
@@ -1222,6 +1212,7 @@ img {
   display: grid;
 
   grid-column-gap: 30px;
+  grid-row-gap: 80px;
   grid-template-columns: repeat(4, 270px);
 }
 
@@ -1243,11 +1234,14 @@ img {
 }
 
 .product-container-describe {
+  display: grid;
   height: 100%;
   padding: 133px 40px 24px 40px;
 
   background-color: var(--extra-light);
   border-radius: 8px;
+
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .product-container-title {
@@ -1415,7 +1409,7 @@ img {
   background-color: var(--white);
   background-image: url(../images/png/background-news.png);
   background-repeat: no-repeat;
-  background-position: right -74px bottom -104px;
+  background-position: right -74px top -106px;
   background-size: 114%;
   border-radius: 16px;
 }
@@ -1636,7 +1630,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   font-family: "Inter";
-  color: var(--neutral);
+  color: var(--extra-dark);
 
   background-color: var(--white);
   border: 1px solid var(--neutral);
@@ -1649,15 +1643,19 @@ img {
 }
 
 .input:focus {
-  border: 2px solid var(--extra-dark);
+  border: 1px solid var(--extra-dark);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--extra-dark);
 }
 
-.input:invalid {
+.error:invalid {
   border: 1px solid var(--red);
 }
 
-.input:invalid:hover {
-  border: 2px solid var(--red);
+.error:invalid:hover {
+  border: 1px solid var(--red);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--red);
 }
 
 .phone-delivery {
@@ -2257,6 +2255,8 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  cursor: pointer;
 }
 
 .filter-group-check {
