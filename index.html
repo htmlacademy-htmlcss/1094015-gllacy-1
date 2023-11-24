@@ -11,6 +11,7 @@
 
   <!-- Класс dark отвечает за синий фон, класс bright за желтый фон-->
   <!-- Для добавления кнопки со спинером, добавить класс button-load  -->
+  <!-- Для добавления полей с ошибкой добавить класс error -->
 
   <body>
     <div class="page-container">
@@ -104,10 +105,10 @@
                     <li class="basket-item">
                       <a class="basket-link" href="#">
                         <img src="images/jpg/product/raspberry.jpg" width="46" height="46" alt="Мороженное Малинка.">
-                        <span class="basket-container">
+                        <div class="basket-container">
                           <h3 class="basket-product-title">Малинка</h3>
                           <span class="basket-desc">1&nbsp;кг&nbsp;х&nbsp;310&nbsp;₽</span>
-                        </span>
+                        </div>
                       </a>
                       <p class="basket-price">310&nbsp;₽</p>
                       <button class="basket-del" type="button">
@@ -117,10 +118,10 @@
                     <li class="basket-item">
                       <a class="basket-link" href="#">
                         <img src="images/jpg/product/bubble-gum.jpg" width="46" height="46" alt="Мороженное Бабл-гам.">
-                        <span class="basket-container">
+                        <div class="basket-container">
                           <h3 class="basket-product-title">Бабл-гам</h3>
                           <span class="basket-desc">1,5&nbsp;кг&nbsp;х&nbsp;320&nbsp;₽</span>
-                        </span>
+                        </div>
                       </a>
                       <p class="basket-price">480&nbsp;₽</p>
                       <button class="basket-del" type="button">
@@ -334,7 +335,7 @@
               <p class="newsletter-title">Подпишитесь на нашу сладкую рассылку и будьте всегда<br> в курсе всего самого вкусного, что у нас происходит. Обещаем<br> не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="form-mailing" action="https://echo.htmlacademy.ru/" method="get">
                 <label class="visually-hidden" for="email">Напишите ваш E-mail</label>
-                <input class="mailing-input input" type="email" name="email" id="email" placeholder="email@example.com" required>
+                <input class="mailing-input input error" type="email" name="email" id="email" placeholder="email@example.com" required>
                 <button class="button button-dark" type="submit">Отправить</button>
               </form>
             </div>
