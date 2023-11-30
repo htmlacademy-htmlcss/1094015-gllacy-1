@@ -221,7 +221,7 @@ img {
   width: 16px;
   height: 16px;
 
-  background: url(../images/svg/spinner.svg) center center no-repeat;
+  background: url("../images/svg/spinner.svg") center center no-repeat;
   background-size: contain;
   transform: translateY(-50%);
 
@@ -307,8 +307,8 @@ img {
 
   background-color: currentColor;
 
-  -webkit-mask-image: url(../images/svg/header/arrow.svg);
-  mask-image: url(../images/svg/header/arrow.svg);
+  -webkit-mask-image: url("../images/svg/header/arrow.svg");
+  mask-image: url("../images/svg/header/arrow.svg");
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -333,8 +333,8 @@ img {
   background-color: currentColor;
   transform: translateY(-50%);
 
-  -webkit-mask-image: url(../images/svg/header/search.svg);
-  mask-image: url(../images/svg/header/search.svg);
+  -webkit-mask-image: url("../images/svg/header/search.svg");
+  mask-image: url("../images/svg/header/search.svg");
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -355,8 +355,8 @@ img {
   background-color: currentColor;
   transform: translateY(-50%);
 
-  -webkit-mask-image: url(../images/svg/header/entrance.svg);
-  mask-image: url(../images/svg/header/entrance.svg);
+  -webkit-mask-image: url("../images/svg/header/entrance.svg");
+  mask-image: url("../images/svg/header/entrance.svg");
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -377,8 +377,8 @@ img {
   background-color: currentColor;
   transform: translateY(-50%);
 
-  -webkit-mask-image: url(../images/svg/header/basket.svg);
-  mask-image: url(../images/svg/header/basket.svg);
+  -webkit-mask-image: url("../images/svg/header/basket.svg");
+  mask-image: url("../images/svg/header/basket.svg");
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -1833,7 +1833,7 @@ img {
 }
 
 .footer-info-text-like::before {
-  content: url(../images/svg/heart.svg);
+  content: url("../images/svg/heart.svg");
   position: absolute;
   position: absolute;
   top: 1px;
@@ -2067,12 +2067,12 @@ img {
   border: none;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-input[type="number"] {
+.input-number {
   -moz-appearance: textfield;
 }
 
@@ -2314,8 +2314,8 @@ input[type="number"] {
 
   background-color: var(--extra-dark);
 
-  -webkit-mask-image: url(../images/svg/union.svg);
-  mask-image: url(../images/svg/union.svg);
+  -webkit-mask-image: url("../images/svg/union.svg");
+  mask-image: url("../images/svg/union.svg");
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -2323,8 +2323,8 @@ input[type="number"] {
 }
 
 .filter-input-check:checked:after {
-  -webkit-mask-image: url(../images/svg/checkbox.svg);
-  mask-image: url(../images/svg/checkbox.svg);
+  -webkit-mask-image: url("../images/svg/checkbox.svg");
+  mask-image: url("../images/svg/checkbox.svg");
 }
 
 .filter-input-check:hover::after {
